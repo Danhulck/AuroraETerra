@@ -1,0 +1,16 @@
+<div *ngIf="isOpen" class="backdrop" @fade (click)="onClose()"></div>
+
+<div *ngIf="isOpen" class="modal" @zoomIn (click)="$event.stopPropagation()">
+  <button class="close-btn" (click)="onClose()">×</button>
+
+  <div class="modal-content">
+    <h2>{{ product.title }}</h2>
+    <img [src]="product.image" [alt]="product.title" />
+    <p class="description">{{ product.description }}</p>
+
+    <div class="meta">
+      <p><strong>Preço:</strong> {{ product.price }}</p>
+      <p *ngIf="product.badge"><strong>Destaque:</strong> {{ product.badge }}</p>
+    </div>
+  </div>
+</div>

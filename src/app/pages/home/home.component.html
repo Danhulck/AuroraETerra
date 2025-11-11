@@ -1,0 +1,53 @@
+<!-- 🟩 Hero Section -->
+<section class="hero">
+  <div class="hero-background">
+    <img
+      src="https://images.unsplash.com/photo-1637790156083-da76c003db2b?crop=entropy&fit=crop&w=1600&q=80"
+      alt="Sustainable Fashion"
+    />
+    <div class="overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1>Vista o que o planeta aprova</h1>
+    <p>
+      Nossas peças nascem do respeito à natureza e ao seu estilo. Escolha o conforto que o planeta também escolheria.
+    </p>
+
+    <div class="hero-buttons">
+      <button class="btn-primary">Explorar Coleção</button>
+      <button class="btn-outline">Nossa História</button>
+    </div>
+  </div>
+</section>
+
+<!-- 🟫 Featured Collection Section -->
+<section id="colecao" class="featured-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="title">Coleção Destaque</h2>
+      <p class="subtitle">
+        Peças únicas que combinam estilo contemporâneo com sustentabilidade.
+      </p>
+    </div>
+
+    <div class="product-grid">
+      <app-product-card
+        *ngFor="let p of products"
+        [product]="p"
+        (cardClick)="onCardClick(p)"
+        (hoverChange)="onHoverChange($event, p)">
+      </app-product-card>
+    </div>
+  </div>
+</section>
+
+<app-brand-values></app-brand-values>
+
+
+<!-- Modal -->
+<app-product-modal
+  [product]="selectedProduct"
+  [isOpen]="isModalOpen"
+  (close)="closeModal()">
+</app-product-modal>

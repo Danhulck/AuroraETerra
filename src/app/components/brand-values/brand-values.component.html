@@ -1,0 +1,21 @@
+<section id="valores" class="values-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="title">Nossos Valores</h2>
+      <p class="subtitle">Comprometidos com o planeta e com você</p>
+    </div>
+
+    <div class="values-grid">
+      <div
+        class="value-card"
+        *ngFor="let value of values"
+      >
+        <div class="icon-wrapper">
+          <span class="icon">{{ value.icon }}</span>
+        </div>
+        <h3 class="value-title">{{ value.title }}</h3>
+        <p class="value-description">{{ value.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

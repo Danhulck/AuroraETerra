@@ -1,0 +1,18 @@
+<div
+  class="product-card"
+  [@cardAnim]="{ value: 'in', params: { delay: product.delay || 0, ease: 'cubic-bezier(.2,.8,.2,1)' } }"
+  (click)="onClick($event)"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+>
+  <div class="image-wrapper">
+    <img [src]="product.image" [alt]="product.title" />
+    <span *ngIf="product.badge" class="badge">{{ product.badge }}</span>
+  </div>
+
+  <div class="info">
+    <h3 class="product-title">{{ product.title }}</h3>
+    <p class="product-description">{{ product.description }}</p>
+    <p class="product-price">{{ product.price }}</p>
+  </div>
+</div>

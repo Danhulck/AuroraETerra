@@ -1,0 +1,186 @@
+/* ======= Estrutura geral ======= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(59, 122, 87, 0.2);
+  z-index: 50;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* ======= Logo ======= */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #3b7a57;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon i {
+  color: white;
+  font-size: 22px;
+}
+
+.logo h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+/* ======= Navegação Desktop ======= */
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-desktop a {
+  color: #7a5c42;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-desktop a:hover {
+  color: #3b7a57;
+}
+
+/* ======= Ações ======= */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Campo de busca */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f2ede4;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.search-box i {
+  color: #7a5c42;
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: #3b3b3b;
+}
+
+.search-box input::placeholder {
+  color: rgba(122, 92, 66, 0.6);
+}
+
+/* Botão do carrinho */
+.cart-btn {
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #7a5c42;
+  transition: 0.3s;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.cart-btn:hover {
+  color: #3b7a57;
+  background: rgba(163, 201, 168, 0.2);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #3b7a57;
+  color: white;
+  font-size: 11px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botão do menu mobile */
+.menu-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #7a5c42;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.menu-btn i {
+  font-size: 22px;
+}
+
+/* ======= Menu Mobile ======= */
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  border-top: 1px solid rgba(59, 122, 87, 0.2);
+  background: white;
+}
+
+.nav-mobile a {
+  color: #7a5c42;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.3s;
+}
+
+.nav-mobile a:hover {
+  color: #3b7a57;
+}
+
+/* ======= Responsividade ======= */
+@media (max-width: 1024px) {
+  .search-box {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
