@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import { ProductCardComponent, Product } from '../../components/product-card/product-card.component';
 import { ProductModalComponent } from '../../components/product-modal/product-modal.component';
 import { BrandValuesComponent } from '../../components/brand-values/brand-values.component';
+import { NewsletterComponent } from '../../components/newsletter/newsletter.component';
 import { products } from '../../mock/products.mock';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ProductCardComponent, ProductModalComponent, BrandValuesComponent],
+  imports: [CommonModule, ProductCardComponent, ProductModalComponent, BrandValuesComponent, NewsletterComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

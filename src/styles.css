@@ -1,1 +1,139 @@
-/* You can add global styles to this file, and also import other style files */
+/* ------------------------------
+   Aurora & Terra – Estilo Base
+   ------------------------------ */
+
+/* 🌿 Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+/* 🎨 Variáveis de Tema */
+:root {
+  /* Cores principais */
+  --forest-green: #ffffff;
+  --soft-sand: #F2EDE4;
+  --earth-brown: #7A5C42;
+  --light-green: #A3C9A8;
+  --white: #FFFFFF;
+
+  /* Tokens funcionais */
+  --background: var(--soft-sand);
+  --foreground: var(--earth-brown);
+  --primary: var(--forest-green);
+  --secondary: var(--light-green);
+  --accent: var(--earth-brown);
+
+  /* Sombras e bordas */
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --radius: 0.75rem;
+}
+
+/* 🌙 Tema escuro */
+.dark {
+  --background: #1b1b1b;
+  --foreground: #eaeaea;
+  --primary: #A3C9A8;
+  --secondary: #3B7A57;
+  --accent: #ffffff;
+}
+
+/* 🌎 Reset + Tipografia */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
+}
+
+/* ------------------------------
+   🔘 Botões
+   ------------------------------ */
+button {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+  transform: scale(1.05);
+}
+
+/* ------------------------------
+   🧩 Cards
+   ------------------------------ */
+.card {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.dark .card {
+  background-color: #2a2a2a;
+}
+
+/* ------------------------------
+   📨 Formulário / Input
+   ------------------------------ */
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--secondary);
+  font-size: 1rem;
+  color: var(--foreground);
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* ------------------------------
+   🧭 Layout utilitário
+   ------------------------------ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+

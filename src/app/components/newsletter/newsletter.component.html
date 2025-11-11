@@ -1,0 +1,27 @@
+<section class="newsletter-section">
+  <div class="newsletter-container">
+    <div class="icon-circle">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAA60lEQVR4nO3UPUoEQRCG4UHMVsTYVfEKKnsHF83MDb2Cp1gUDDyEgrLgKUSvoIx/sYGRwrMM9EAz9jjLzioG80bNVNX3dVU1k2Ud/wbs4Vl7njBMGRSBeZGnDEqWW0yhV4qkgu8h9oKDGcT38Rg0PlIJq7iIOhljYwrhPi6juhtsNi37obwJjrGYyFvAUdT5Kw5/Ej7HSjTLET5D8R12otxt3IbYF87K3WEJJymDgrfKt62K0GlRHM4F9xhUavK6JSe37/somkZX+4rSgQDWcIVrrGc1zGwwLZ1BK4Nf/9kN52SSY7e5146/YgKwZrw8prYBtQAAAABJRU5ErkJggg==" alt="mail" style="width: 37px; height: 37px;">
+    </div>
+
+    <h2>Junte-se à Nossa Comunidade</h2>
+    <p>
+      Receba novidades, dicas de moda sustentável e ofertas exclusivas direto no seu e-mail.
+    </p>
+
+    <form (submit)="handleSubmit($event)" class="newsletter-form">
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="Seu melhor e-mail"
+        required
+      />
+      <button type="submit">Inscrever-se</button>
+    </form>
+
+    <p class="privacy">
+      Respeitamos sua privacidade. Cancele a inscrição a qualquer momento.
+    </p>
+  </div>
+</section>
